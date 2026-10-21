@@ -1,0 +1,220 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tu tienda online de mascotas en Perú. Alimentos, juguetes, higiene, accesorios y ropa para perros y gatos.">
+  <title>Patitas Market | Todo para tu mascota</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Nunito:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <div class="announcement">
+    <span>🐾</span> Todo para tus engreídos, en un solo lugar
+    <span class="announcement-right">Compras en soles · Envíos en Perú</span>
+  </div>
+
+  <header class="header">
+    <a href="#" class="logo" aria-label="Patitas Market inicio">
+      <span class="logo-icon">🐾</span>
+      <span>patitas<span class="logo-accent">market</span><small>TODO PARA ELLOS</small></span>
+    </a>
+
+    <form class="search-bar" id="searchForm">
+      <input id="searchInput" type="search"
+        placeholder="Busca alimento, juguetes, accesorios..."
+        aria-label="Buscar productos">
+      <button type="submit" aria-label="Buscar">⌕</button>
+    </form>
+
+    <div class="header-actions">
+      <a class="account-link" href="#benefits">
+        <span>♡</span><small>Compra con confianza</small>
+      </a>
+      <button class="cart-button" id="openCart">
+        <span>🛒</span>
+        <span class="cart-label">Mi carrito</span>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+    </div>
+  </header>
+
+  <nav class="main-nav">
+    <div class="nav-inner">
+      <a href="#productos" data-nav="todos">☰ Todas las categorías</a>
+      <a href="#productos" data-nav="perros">🐶 Perros</a>
+      <a href="#productos" data-nav="gatos">🐱 Gatos</a>
+      <a href="#productos" data-nav="juguetes">Juguetes</a>
+      <a href="#productos" data-nav="higiene">Higiene y cuidado</a>
+      <a href="#productos" data-nav="accesorios">Accesorios</a>
+      <a href="#productos" data-nav="ropa">Ropita</a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <span class="eyebrow">PARA LOS QUE MÁS QUIERES 🐾</span>
+        <h1>Su mundo es mejor<br>cuando <span>estás tú.</span></h1>
+        <p>Alimento, juguetes y todo lo que necesitan para vivir felices. Encuentra sus favoritos sin salir de casa.</p>
+        <a href="#productos" class="primary-button">Explorar productos <span>→</span></a>
+        <div class="hero-points">
+          <span>✓ Compra fácil</span>
+          <span>✓ Precios en soles</span>
+          <span>✓ Para perros y gatos</span>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1450778869180-41d0601e046e?auto=format&fit=crop&w=1000&q=85"
+          alt="Perro feliz disfrutando al aire libre">
+        <div class="floating-card">
+          <span class="floating-icon">💛</span>
+          <div><strong>Pequeños detalles,</strong><br><span>grandes momentos</span></div>
+        </div>
+        <span class="hero-dot dot-one"></span>
+        <span class="hero-dot dot-two"></span>
+      </div>
+    </section>
+
+    <section class="category-section section-wrap">
+      <div class="section-heading">
+        <div><span class="eyebrow">ENCUENTRA SUS FAVORITOS</span><h2>¿Qué necesita hoy?</h2></div>
+        <a href="#productos" class="text-link">Ver todo →</a>
+      </div>
+
+      <div class="category-grid">
+        <button class="category-card cat-dog" data-category="perros">
+          <span class="category-emoji">🐶</span><strong>Perros</strong><small>Alimento y más</small>
+        </button>
+        <button class="category-card cat-cat" data-category="gatos">
+          <span class="category-emoji">🐱</span><strong>Gatos</strong><small>Todo para michis</small>
+        </button>
+        <button class="category-card cat-toy" data-category="juguetes">
+          <span class="category-emoji">🧸</span><strong>Juguetes</strong><small>Hora de jugar</small>
+        </button>
+        <button class="category-card cat-care" data-category="higiene">
+          <span class="category-emoji">🧴</span><strong>Higiene y cuidado</strong><small>Siempre limpiecitos</small>
+        </button>
+        <button class="category-card cat-accessory" data-category="accesorios">
+          <span class="category-emoji">🦴</span><strong>Accesorios</strong><small>Para cada aventura</small>
+        </button>
+        <button class="category-card cat-clothes" data-category="ropa">
+          <span class="category-emoji">👕</span><strong>Ropita</strong><small>Con mucho estilo</small>
+        </button>
+      </div>
+    </section>
+
+    <section class="promo-strip">
+      <div class="promo-icon">🎾</div>
+      <div><span class="eyebrow">MÁS JUEGO, MÁS ALEGRÍA</span><h2>Pequeños juguetes. Grandes aventuras.</h2></div>
+      <button class="secondary-button" data-promo="juguetes">Descubrir juguetes →</button>
+    </section>
+
+    <section class="products-section section-wrap" id="productos">
+      <div class="section-heading product-heading">
+        <div>
+          <span class="eyebrow">NUESTRO CATÁLOGO</span>
+          <h2 id="productTitle">Favoritos de la manada</h2>
+          <p id="productSubtitle">Encuentra todo lo que hace felices a tus compañeros.</p>
+        </div>
+        <label class="sort-control">Ordenar por
+          <select id="sortSelect">
+            <option value="featured">Destacados</option>
+            <option value="price-low">Menor precio</option>
+            <option value="price-high">Mayor precio</option>
+            <option value="name">Nombre A–Z</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="filter-bar" id="filterBar">
+        <button class="filter-chip active" data-category="todos">Todos</button>
+        <button class="filter-chip" data-category="perros">Perros</button>
+        <button class="filter-chip" data-category="gatos">Gatos</button>
+        <button class="filter-chip" data-category="juguetes">Juguetes</button>
+        <button class="filter-chip" data-category="higiene">Higiene y cuidado</button>
+        <button class="filter-chip" data-category="accesorios">Accesorios</button>
+        <button class="filter-chip" data-category="ropa">Ropa</button>
+      </div>
+
+      <div class="product-grid" id="productGrid" aria-live="polite"></div>
+      <div class="empty-state" id="emptyState" hidden>
+        <span>🐾</span><h3>No encontramos productos</h3>
+        <p>Prueba con otra búsqueda o categoría.</p>
+        <button class="primary-button" id="resetFilters">Ver todos los productos</button>
+      </div>
+      <button class="outline-button load-more" id="loadMore">Ver todos los productos ↓</button>
+    </section>
+
+    <section class="benefits-section" id="benefits">
+      <div class="section-wrap benefits-grid">
+        <div class="benefit"><span>🚚</span><div><strong>Envíos coordinados</strong><p>Consulta cobertura y tiempos de entrega.</p></div></div>
+        <div class="benefit"><span>🔒</span><div><strong>Compra con confianza</strong><p>Información clara antes de comprar.</p></div></div>
+        <div class="benefit"><span>🐾</span><div><strong>Para toda la familia</strong><p>Productos para perros y gatos.</p></div></div>
+        <div class="benefit"><span>💬</span><div><strong>Estamos para ayudarte</strong><p>Resuelve tus dudas sobre tu pedido.</p></div></div>
+      </div>
+    </section>
+
+    <section class="newsletter section-wrap">
+      <div><span class="eyebrow">NOTICIAS DE LA MANADA</span><h2>Un poquito de amor en tu correo.</h2><p>Novedades, consejos y productos para tus engreídos.</p></div>
+      <form id="newsletterForm" class="newsletter-form">
+        <input type="email" placeholder="Tu correo electrónico" required aria-label="Correo electrónico">
+        <button class="primary-button" type="submit">Quiero recibirlas</button>
+      </form>
+      <small id="newsletterMessage"></small>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#" class="logo footer-logo"><span class="logo-icon">🐾</span><span>patitas<span class="logo-accent">market</span><small>TODO PARA ELLOS</small></span></a>
+        <p>Una tienda hecha para quienes saben que las mascotas son familia.</p>
+      </div>
+      <div><h3>Comprar</h3><a href="#productos" data-nav="perros">Alimento para perros</a><a href="#productos" data-nav="gatos">Alimento para gatos</a><a href="#productos" data-nav="juguetes">Juguetes</a><a href="#productos" data-nav="ropa">Ropa para mascotas</a></div>
+      <div><h3>Ayuda</h3><a href="#benefits">Envíos y entregas</a><a href="#benefits">Preguntas frecuentes</a><a href="mailto:hola@patitasmarket.pe">Contáctanos</a></div>
+      <div><h3>En Perú 🇵🇪</h3><p>Precios en soles (S/).</p><p>Consulta las zonas de reparto disponibles.</p><p>hola@patitasmarket.pe</p></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Patitas Market. Todos los derechos reservados.</span><span>Hecho con 🧡 para ellos.</span></div>
+  </footer>
+
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Carrito de compras" aria-hidden="true">
+    <div class="drawer-header"><div><span class="eyebrow">TU COMPRA</span><h2>Mi carrito <span id="drawerCount">(0)</span></h2></div><button class="icon-button" id="closeCart" aria-label="Cerrar carrito">✕</button></div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-empty" id="cartEmpty"><span>🛒</span><h3>Tu carrito está vacío</h3><p>¡Sus próximos favoritos te esperan!</p><button class="primary-button" id="continueShopping">Explorar productos</button></div>
+    <div class="cart-summary" id="cartSummary">
+      <div class="summary-line"><span>Subtotal</span><strong id="cartSubtotal">S/ 0.00</strong></div>
+      <p class="shipping-note">El costo de envío se confirma según tu dirección.</p>
+      <button class="primary-button checkout-button" id="checkoutButton">Continuar al pedido →</button>
+      <small>El pago real todavía no está habilitado en esta demo.</small>
+    </div>
+  </aside>
+
+  <div class="modal-overlay" id="checkoutModal" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle">
+    <div class="checkout-modal">
+      <button class="icon-button modal-close" id="closeCheckout" aria-label="Cerrar">✕</button>
+      <span class="eyebrow">CASI LISTO 🐾</span>
+      <h2 id="checkoutTitle">Datos de tu pedido</h2>
+      <p>Completa tus datos para preparar tu solicitud de compra.</p>
+      <form id="checkoutForm">
+        <label>Nombre completo<input name="name" required autocomplete="name" placeholder="Tu nombre"></label>
+        <label>Correo electrónico<input name="email" type="email" required autocomplete="email" placeholder="tu@correo.com"></label>
+        <label>Teléfono de contacto<input name="phone" type="tel" required autocomplete="tel" placeholder="+51 999 999 999"></label>
+        <label>Distrito y dirección<input name="address" required autocomplete="street-address" placeholder="Distrito, calle y número"></label>
+        <label>Notas del pedido<textarea name="notes" placeholder="Referencias para la entrega (opcional)"></textarea></label>
+        <div class="checkout-total"><span>Total de productos</span><strong id="checkoutTotal">S/ 0.00</strong></div>
+        <button class="primary-button checkout-button" type="submit">Preparar solicitud</button>
+        <small>Demo: este formulario no cobra ni envía pedidos a una tienda real.</small>
+      </form>
+      <div id="checkoutMessage" class="checkout-message" hidden></div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
